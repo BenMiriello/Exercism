@@ -12,6 +12,7 @@ class Series
   end
 
   def slices(n)
+    raise ArgumentError.new if n > @@numbers.length
     @slices = []
     i = 0
 
