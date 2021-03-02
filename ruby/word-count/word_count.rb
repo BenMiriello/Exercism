@@ -13,7 +13,7 @@ class Phrase
 
   def word_count
     counts = {}
-    for word in @phrase.scan(/\w+/)
+    for word in @phrase.scan(/\w+/).map { |word| word.downcase }
       counts[word] = (counts[word] || 0) + 1 
     end
     counts
