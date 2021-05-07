@@ -6,6 +6,7 @@ To get started with TDD, see the `README.md` file in your
 `ruby/word-count` directory.
 =end
 
+# initialize with a phrase and get the number of words in the phrase with word_count
 class Phrase
   def initialize(phrase)
     @phrase = phrase
