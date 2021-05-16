@@ -17,6 +17,12 @@ class Array
   end
 
   def discard
-    yield self
+    mapped_array = []
+    counter = 0
+    until counter == self.size
+      mapped_array.push(self[counter]) unless yield self[counter]
+      counter += 1
+    end
+    mapped_array
   end
 end
